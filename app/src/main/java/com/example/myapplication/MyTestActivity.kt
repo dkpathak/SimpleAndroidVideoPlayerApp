@@ -21,12 +21,11 @@ class MyTestActivity : AppCompatActivity() {
     }
 
      private fun initializePlayer(): Boolean {
-        player = ExoPlayer.Builder(this).build().apply {
-            Player.REPEAT_MODE_ALL
-        }
+        player = ExoPlayer.Builder(this).build()
+         player.repeatMode = Player.REPEAT_MODE_ALL
         playerView?.player = player
         playerView?.useController = false
-        val mediaItem: MediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-1/mp4/frame-counter-one-hour.mp4")
+        val mediaItem: MediaItem = MediaItem.fromUri("https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
         player.setMediaItem(mediaItem)
         player.prepare()
         player.play()
