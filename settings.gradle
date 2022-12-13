@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement{
+    repositories{
+        maven { url "https://jitpack.io" }
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "My Application"
+include ':app'
